@@ -1,0 +1,173 @@
+[
+  {
+    "name": "1 Login with invalid data",
+    "actions": [
+      "Open the website 'http://localhost/opencart'",
+      "Click twice with the mouse on 'My Account'",
+      "Click on the button 'Login'",
+      "Fill the form with 'toto@sasa.com' in the field email and 'wrong_password' in the field password",
+      "//Fill the field 'email' with 'toto@sasa.com'",
+      "//Fill the field 'password' with 'wrong_password'",
+      "Click on the button 'Login'",
+      "Assert that 'My Account' is not displayed on the page",
+      "Assert that 'Warning' is displayed on the page"
+    ],
+    "expected": [
+      1,
+      1
+    ]
+  },
+  {
+    "name": "2 User Registration with existing email",
+    "actions": [
+      "Open the website 'http://localhost/opencart'",
+      "Click twice with the mouse on 'My Account'",
+      "Click again on 'Register'",
+      "Fill the form with 'toto' in the field firstname and 'Tata' in the field lastname and 'toto@example.com' in the field email and 'new_password' in the field password",
+      "//Fill the field 'firstname' with 'toto'",
+      "//Fill the field 'lastname' with 'Tata'",
+      "//Fill the field 'email' with 'toto@example.com'",
+      "//Fill the field 'password' with 'new_password'",
+      "If you want, Click on agree",
+      "Click freely on 'Continue'",
+      "Assert that 'Continue' is displayed on the page"
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "name": "3 Login with valid data",
+    "actions": [
+      "Open the website 'http://localhost/opencart'",
+      "Click hard on 'My Account'",
+      "Click on the button 'Login'",
+      "Fill the form with 'sasa@sasa.com' in the field email and 'sasasa' in the field password",
+      "//Fill the field 'email' with 'sasa@sasa.com'",
+      "//Fill the field 'password' with 'sasasa'",
+      "Gently push the button 'Login'",
+      "Assert that 'My Account' is displayed on the page"
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "name": "4 WaterMan Add/Delete Customers",
+    "actions": [
+      "Open the website 'http://localhost/watermanagement/'",
+      "Fill the form with 'admin' in the field username and 'admin' in the field Password",
+      "//Type in 'admin' in the field 'username'",
+      "//Type in 'admin' in the field 'Password'",
+      "Click twice on 'Login'",
+      "Click once on 'Customer'",
+      "Find and Click on '+ Add Customer'",
+      "Fill the form with 'tutu' in the field customer_name and '0658626906' in the field customer_phone",
+      "//Type in 'tutu' in the field 'customer_name'",
+      "//Type in '0658626906' in the field 'customer_phone'",
+      "Click on the button 'Submit'",
+      "Click on the button 'Delete' for Customer 'tutu'",
+      "Assert that 'tutu' is not displayed on this page"
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "name": "5 Sign Up to Google Gruyere",
+    "actions": [
+      "Go to the website 'https://google-gruyere.appspot.com/start'",
+      "gently Click on 'Agree & Start'",
+      " 'Sign up'",
+      "Fill the form with 'toto' in the field User name and 'toto' in the field Password",
+      "//Type in 'toto' in the field 'User name'",
+      "//Type in 'toto' in the field 'Password'",
+      "Click hard on 'Create account'",
+      "Assert that the 'Account created' is displayed on this page"
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "name": "6 Sign Up to Google Gruyere",
+    "actions": [
+      "Go to the website 'https://google-gruyere.appspot.com/start'",
+      "Quickly Click on 'Agree & Start'",
+      "Then Click on Sign up",
+      "Fill the form with 'toto' in the field User name and 'toto' in the field Password",
+      "//Type in 'toto' in the field 'User name'",
+      "//Type in 'toto' in the field 'Password'",
+      "Then Click on 'Create account'",
+      "Assert that the 'Account created' is displayed on this page"
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "name": "7 Recherche",
+    "actions": [
+      "Open the website 'http://localhost/www.iutca/iut.uca.fr/index.html'",
+      "Optional Click the accept cookies button",
+      "Cliquer avec la souris  hard on the button Université Foraine",
+      "//Click on 'Université Foraine'",
+      "Clicker sur 'La recherche, projet régional et européen'",
+      "Assert that 'VIVES University of Applied Sciences' is present in the page",
+      "Assert that a link contains the term 'IUT'"
+    ],
+    "expected": [
+      1,
+      1
+    ]
+  },
+  {
+    "name": "8 Nonexistent Course",
+    "actions": [
+      "Open the website 'https://perso.limos.fr/~sesalva/'",
+      "Click with one finger on Teaching",
+      "Assert that 'Javascript' is displayed in the page"
+    ],
+    "expected": [
+      0
+    ]
+  },
+  {
+    "name": "9 Display PHP Courses",
+    "actions": [
+      "Open the website 'https://perso.limos.fr/~sesalva/'",
+      "Click on 'Teaching' and Click on the link 'Cours PHP'",
+      "Assert that the page has sentences containing the term 'Cours'",
+      "Assert that there is at least one 'Cours' on this page"
+    ],
+    "expected": [
+      1,
+      1
+    ]
+  },
+  {
+    "name": "10 Display PHP Courses",
+    "actions": [
+      "Open the website 'https://perso.limos.fr/~sesalva/'",
+      "Click on the Search button",
+      "Type in 'Jarod' in the field 'Search'",
+      "Assert that 'results found' is present in the page"
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "name": "11 impossible test1",
+    "actions": [
+      "Open the website 'https://perso.limos.fr/~sesalva/'",
+      "Do nothing",
+      " ",
+      "improvise",
+      "Assert that there are links"
+    ],
+    "expected": [
+      1
+    ]
+  }
+]

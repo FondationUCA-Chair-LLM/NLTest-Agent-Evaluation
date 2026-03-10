@@ -1,0 +1,47 @@
+[
+     
+  
+    {
+        "name": "Display Security Projects",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/'",
+            "Assert that 'tutu' is displayed in the page"
+        ],
+        "expected": [1, 0]
+    },
+    {
+        "name": "Publications",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/publication/'",
+            "Assert that there is a publication with the author 'Jouseau'"
+            
+        ],
+        "expected": [1, 1]
+    },
+    {
+        "name": "Publications11",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/publication/'",
+            "Assert that 'Javascript' is displayed in the page"
+        ],
+        "expected": [1, 0]
+    },
+    {
+        "name": "Publications2",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/publication/'",
+            "Assert that 'ICSOFT' is displayed in the page"
+        ],
+        "expected": [1, 1]
+    },
+    {
+        "name": "Publications22",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/publication/'",
+            "Assert that 'ICSOFT' is displayed at least 3 times in the page"
+        ],
+        "expected": [ 1, 1]
+    }
+    
+    
+]

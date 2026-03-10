@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": false,
+    "noEmit": false
+  },
+  "include": ["*.ts", "api", "examples/run.ts", "tests/tests.ts", "models/StrictAsserter.ts", "models/Asserter.ts", "utils/compare.ts", "utils/console.ts", "models/Evaluation_Action.ts", "utils/extractor.ts", "index.ts", "utils/observeTable.ts", "models/Observe.ts", "models/ParserStep.ts", "utils/rapportsTests.ts", "tools/take-screenshots.ts", "utils/tokenizer.ts", "config/prompts.ts", "config/config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
