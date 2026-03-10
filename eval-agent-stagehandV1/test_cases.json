@@ -1,0 +1,16 @@
+[
+  
+   {
+  "name": "WaterMan login",
+  "actions": [
+    "Open the website 'http://localhost/watermanagement/'",
+    "Type in 'admin' in the field 'username'",
+    "Type in 'admin' in the field 'Password'",
+    "Click on 'Login'",
+    "Assert that 'Missing Password' is displayed on this page"
+
+  ],
+  "expected": [1, 1, 1, 1, 1]
+}
+    
+]

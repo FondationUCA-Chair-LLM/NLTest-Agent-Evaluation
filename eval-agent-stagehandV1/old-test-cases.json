@@ -1,0 +1,36 @@
+
+{
+        "name": "Display Publications of Jouseau on Personal Website",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/'",
+            "Click on 'Tools'",
+            "Click on 'Teaching'",
+            "Assert that the page has sentences containing the term 'BUT 2A'",
+            "Click on 'Publications'",
+            "Enter 'Jouseau' into the search field",
+            "Assert that there are 3 publications on the page"
+        ],
+        "expected": [1, 1, 1, 1, 1]
+    },
+    {
+        "name": "Display Type of Publication",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/'",
+            "Click on 'Publications'",
+            "Click on 'On Studying the Effect of Data Quality on Classification Performance'",
+            "Assert that the 'Type' is '1'"
+        ],
+        "expected": [1, 1, 1, 1]
+    },
+    {
+        "name": "Display Coordinator of VASOC Project",
+        "actions": [
+            "Open the website 'https://perso.limos.fr/~sesalva/'",
+            "Click on 'Projects'",
+            "Click on 'Security'",
+            "Assert that the page has sentences containing the term 'VASOC'",
+            "Click on 'VASOC'",
+            "Assert that the page has sentences containing the term 'Coordinator'"
+        ],
+        "expected": [1, 1, 1, 1, 1]
+    },
