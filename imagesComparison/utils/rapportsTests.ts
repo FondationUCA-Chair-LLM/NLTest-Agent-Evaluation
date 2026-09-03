@@ -197,7 +197,7 @@ export async function writeInFile(titles: string[], values: string[]) {
     }
 
     await workbook.xlsx.writeFile('../WebSites&Results/results.xlsx'); //results.xlsx
-    console.debug(`Valeurs ajoutées !`);
+    console.log(`Valeurs ajoutées !`);
 }
 
 
@@ -310,12 +310,13 @@ export async function updateTotal(titles: string[], values: string[]) {
         }
     }
 
+
     titles.forEach((t, i) => {
 
         console.log(lastSiteUsedRow);
         console.log(values[i]);
         console.log(t.toLocaleLowerCase());
-        sheet.getRow(lastSiteUsedRow).getCell(t.toLowerCase()).value = values[i];
+        sheet.getRow(lastSiteUsedRow+ 2).getCell(t.toLowerCase()).value = values[i];
 
 
         const cell = sheet.getRow(lastSiteUsedRow).getCell(t.toLowerCase());

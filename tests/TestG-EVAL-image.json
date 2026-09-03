@@ -305,7 +305,7 @@
     ]
   },
   {
-    "name": "ARTEMIS PAPIER False ***** remove****",
+    "name": "ARTEMIS PAPIER False",
     "actions": [
       "Open the website 'https://www.uca.fr/en'",
       "Assert that the page has links",

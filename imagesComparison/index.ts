@@ -65,6 +65,7 @@ function loadTestCases(filename: string): any {
 }
 
 async function main() {
+  let startTime = performance.now();
   const test_cases = loadTestCases(test_suite);
   let total_eval: number[] = [];
   let total_nav: number[] = [];
@@ -93,10 +94,10 @@ async function main() {
     const [meval, mnav, massert] = compute_STD(all_eval, all_nav, all_assert);
 
     console.log(`\n📊 Final Metrics for Test Case: ${test_case.name}`);
-    //console.log(`✅ Match Rate Eval:   ${(average(all_eval)).toFixed(2)}`);
+    console.log(`✅ Match Rate Eval:   ${(average(all_eval)).toFixed(2)}`);
     console.log(`✅ Match Rate Nav:    ${(average(all_nav)).toFixed(2)}`);
     console.log(`✅ Match Rate Assert: ${(average(all_assert)).toFixed(2)}`);
-    //console.log(`📐 Eval Std Dev:      ${meval.toFixed(4)}`);
+    console.log(`📐 Eval Std Dev:      ${meval.toFixed(4)}`);
     console.log(`📐 Nav Std Dev:       ${mnav.toFixed(4)}`);
     console.log(`📐 Assert Std Dev:    ${massert.toFixed(4)}`);
     console.log(`📐 Nb of runs :    ${NUM_RUNS_TEMP}`);
@@ -105,6 +106,8 @@ async function main() {
     const rowVal = [(average(all_eval)).toFixed(2), (average(all_nav)).toFixed(2), (average(all_assert)).toFixed(2), meval.toFixed(4), mnav.toFixed(4), massert.toFixed(4)]
 
     await writeInFile(rowName, rowVal);
+let endTime = performance.now();
+  console.log(`\n⏱️ Eexecution time: ${(endTime - startTime) / 1000} seconds`);
 
     // Clear for next test case
     all_eval = [];
@@ -126,6 +129,8 @@ async function main() {
   const rowName = ['Readiness', 'Navigation', 'Assertion', 'Standarddev_readi', 'Standarddev_nav', 'Standarddev_assert']
   const rowVal = [(average(total_eval)).toFixed(2), (average(total_nav)).toFixed(2), (average(total_assert)).toFixed(2), g_eval.toFixed(4), g_nav.toFixed(4), g_assert.toFixed(4)]
   await updateTotal(rowName, rowVal);
+let endTime = performance.now();
+  console.log(`\n⏱️ Total execution time: ${(endTime - startTime) / 1000} seconds`);
 
 }
 
@@ -182,7 +187,7 @@ async function simple_run(
       }
     } else {
       if (!task[i].match(/Assert/)) {
-        /*try {
+        try {
           readiness = await evaluateWithLLM(framework, task[i], data);
           if (typeof expected[i] === "string") {
             eval_results.push(Number(readiness));
@@ -195,7 +200,7 @@ async function simple_run(
           console.log(`Evaluation failed at step ${i}: ${task[i]} ->`, error);
           NUM_RUNS_TEMP++;
           continue;
-        }*/
+        }
 
         try {
           //eval agent

@@ -223,10 +223,3 @@ const elementsWithSelectors = yield Promise.all(
 
 > **Note:** This is a temporary workaround. Consider creating a patch file or reporting this issue to the Stagehand repository.
 
-## 👥 Authors
-
-- Ange BARDET
-- Arthur GONZALEZ
-- Damien NORTIER
-- Alexis THOMAS
-- Tom MILLERAT

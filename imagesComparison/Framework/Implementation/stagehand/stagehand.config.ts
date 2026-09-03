@@ -29,9 +29,7 @@ export const StagehandConfig: ConstructorParams = {
       viewport: {
         width: 1024,
         height: 768,
-        
       },
-     
     },
   },
   localBrowserLaunchOptions: {
@@ -39,8 +37,7 @@ export const StagehandConfig: ConstructorParams = {
       width: 1024,
       height: 768,
     },
-    //headless: true /* Whether to run the browser in headless mode */,
-     
+     //headless: true,
   } /* Configuration options for the local browser */,
 };
 
